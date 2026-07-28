@@ -15,20 +15,59 @@
 #     if i % multiplier == 0:
 #         print(i)
 
+# -----------------------------------------------------------------
+
+#  check if a number is positive, negative, or zero
+
+# number = int(input("Enter a number to check:"))
+
+# if number < 0:
+#     print("Negative numbers.")
+# elif number == 0:
+#     print("Zero.")
+# elif number > 0:
+#     print("Positive numbers.")
+
+# if number == 0:
+#     print("Zero.")
+# elif number % 2 == 0 and number != 0:
+#     print("Even number.")
+# else:
+#     print("Odd number.")
+
+# ----------------------------------------------------------------
+#  check if the user is eligible to vote based on their age
 
 
-number = int(input("Enter a number to check:"))
+# try:
+#     name = input("Enter your name: ")
+#     if name is None or name.strip() == "" or name.isdigit():
+#         raise ValueError("Please enter a valid name.")
+#     age = input("Enter your age: ")
+#     if age is None or age.strip() == "" or not age.isdigit():
+#         raise ValueError("Please enter a valid age.")
+#     elif age.isdigit():
+#         age = int(age)
+#         if age < 18:
+#             print("Underage.")
+#         elif age >= 18:
+#             print("You are an adult and eligible to vote.")
+# except ValueError as e:
+#     print(f"Error: {e}")
 
-if number < 0:
-    print("Negative numbers.")
-elif number == 0:
-    print("Zero.")
-elif number > 0:
-    print("Positive numbers.")
-    
-if number == 0:
-    print("Zero.")
-elif number % 2 == 0 and number != 0:
-    print("Even number.")
+
+# ---------------------------------------------------------------------   
+
+#  check if a number is prime
+
+number = int(input("Enter a number to check if it is prime: "))
+is_prime = True
+for i in range(2, int(number ** 0.5) + 1):
+    if number % i == 0:
+        is_prime = False
+        break
+
+if is_prime:
+    print(f"{number} is a prime number.")
 else:
-    print("Odd number.")
+    print(f"{number} is not a prime number.")
