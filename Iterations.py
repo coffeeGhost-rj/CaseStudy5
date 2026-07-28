@@ -60,14 +60,32 @@
 
 #  check if a number is prime
 
-number = int(input("Enter a number to check if it is prime: "))
-is_prime = True
-for i in range(2, int(number ** 0.5) + 1):
-    if number % i == 0:
-        is_prime = False
-        break
+# number = int(input("Enter a number to check if it is prime: "))
+# is_prime = True
+# for i in range(2, int(number ** 0.5) + 1):
+#     if number % i == 0:
+#         is_prime = False
+#         break
 
-if is_prime:
-    print(f"{number} is a prime number.")
-else:
-    print(f"{number} is not a prime number.")
+# if is_prime:
+#     print(f"{number} is a prime number.")
+# else:
+#     print(f"{number} is not a prime number.")
+
+# ---------------------------------------------------------------------
+
+# count = 0
+# list = []
+# while count<10:
+#     for i in range(count):
+#         # print(count*2)
+#         list.append(count)
+#     count += 1
+
+# print(list)
+
+
+# for i in range(10):
+#     for j in range(5):
+#         print("i=",i+1," j=",j+1)
+
