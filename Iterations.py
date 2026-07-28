@@ -89,3 +89,18 @@
 #     for j in range(5):
 #         print("i=",i+1," j=",j+1)
 
+# ------------------------------------------------------------------
+
+from funcFile import add, multiply, substract, divide
+
+number1 = input("enter the number: ")
+number2 = input("enter the number: ")
+
+
+try:
+    print(add(number1, number2))
+except ValueError as e:
+    print(f"Error: {e}")
+
+
+

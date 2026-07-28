@@ -2,7 +2,14 @@ class Account:
     def __init__(self, account_number, account_holder, initial_balance):
         self.account_number = account_number
         self.account_holder = account_holder
-        self.balance = float(initial_balance)
+        self.setBalance(float(initial_balance))
+
+    def setBalance(self, amount):
+        if amount<0:
+            raise ValueError("Amount can not be negative for opening the account.")
+        else:
+            self.balance=amount
+
 
     def show_account_details(self):
         return (f"Account Number: {self.account_number}\n"
@@ -27,6 +34,7 @@ class BankAccount(Account):
     def __init__(self, account_number, account_holder, initial_balance, interest_rate):
         super().__init__(account_number, account_holder, initial_balance)
         self.interest_rate = interest_rate
+
     def calculate_interest(self):
         """Return the interest amount (not applied) rounded to 2 decimals."""
         interest = round(self.balance * (float(self.interest_rate) / 100), 2)
@@ -38,10 +46,10 @@ class BankAccount(Account):
         self.balance = round(self.balance + interest, 2)
         return interest
 
-class SavingsAccount(BankAccount):
-    def __init__(self, account_number, account_holder, initial_balance, interest_rate):
-        super().__init__(account_number, account_holder, initial_balance, interest_rate)
-    # Inherits calculate_interest and apply_interest from BankAccount
+# class SavingsAccount(BankAccount):
+#     def __init__(self, account_number, account_holder, initial_balance, interest_rate):
+#         super().__init__(account_number, account_holder, initial_balance, interest_rate)
+#     Inherits calculate_interest and apply_interest from BankAccount
 
 
 class CurrentAccount(BankAccount):
@@ -62,13 +70,3 @@ class CurrentAccount(BankAccount):
         return super().calculate_interest()
 
 
-account1 = BankAccount("001", "Alice", 1000, 2.5)
-savings1 = SavingsAccount("002", "Bob", 500, 3.0)
-current1 = CurrentAccount("003", "Carol", 100, 0.5, overdraft_limit=200)
-print(account1.show_account_details())
-print(f"interest calculated: ${account1.calculate_interest():.2f}")
-print("-------------")
-print(savings1.show_account_details())
-print(f"interest calculated: ${savings1.calculate_interest():.2f}")
-print("-------------")
-print(current1.show_account_details())

@@ -168,3 +168,17 @@ def display_patient_report(report):
     formatted_report = "\n".join(lines)
     print(formatted_report)
     return formatted_report
+
+
+
+def add(n1,n2):
+    return int(n1) + int(n2) 
+
+def multiply(n1,n2):
+    return int(n1) * int(n2) 
+
+def divide(n1,n2):
+    return int(n1) / int(n2) 
+
+def substract(n1,n2):
+    return int(n1) - int(n2) 
