@@ -1,2 +1,32 @@
-.venv
-__pycache__
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest
+.pytest_cache/
+
+# Coverage reports
+.coverage
+.coverage.*
+htmlcov/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+.installed.cfg
+pip-wheel-metadata/
+
+# Virtual environment
+.env
+.env.*
+.Python
+
+# VS Code
+.vscode/
+
+# OS files
+Thumbs.db
+.DS_Store
