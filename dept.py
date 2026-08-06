@@ -46,3 +46,10 @@ class Address:
             raise ValueError("enter a proper pincode.")
         else:
             self.pincode = pincode
+            
+    def showAdd(self):
+        """
+        Purpose: self
+ street, city, pincode    """
+        return f"Address : {self.street, self.city, self.pincode}"
+    # end def

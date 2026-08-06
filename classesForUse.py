@@ -9,7 +9,7 @@ class Employee:
     #     print(f"Name: {self.name}, Position: {self.position}, Salary: ${self.salary}")
     
     def displayInfo(self):
-        return f"Name : {self.name}, Positon : {self.position}, Salary : {self.salary}, Dept : {self.department.deptname}"
+        return f"Name : {self.name}, Positon : {self.position}, Salary : {self.salary}, Dept : {self.department.deptname }"
     
     def setDept(self, deptObj):
         """

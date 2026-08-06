@@ -18,13 +18,19 @@ from classesForUse import *
 # --- Execution Script ---
 dpname = input("Enter the dept name: ")
 dpFloor = input("Enter the dept location: ")
+street = input("Enter the street: ")
+city = input("Enter the city: ")
+pincode = input("Enter the pincode: ")
 
 try: 
+    empAddr = Address(street, city, pincode)
     # 1. Instantiate the Department object
     deptObj = Department(dpname, dpFloor)
     
     # 2. Pass the Department object inside the Employee constructor
     empObj = Employee("BOB", "Compliance", "2000", deptObj)
+    
+    print(empAddr.showAdd())
  
     # 3. Print outputs
     print("\n--- Employee Info ---")
